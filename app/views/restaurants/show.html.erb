@@ -17,17 +17,21 @@
   <%= @restaurant.category %>
 </p>
 <h3>reviews</h3>
-<table>
-  <tr>
-    <th>content</th>
-    <th>rating</th>
-  </tr>
-  <% @restaurant.reviews.each do |review| %>
-  <tr>
-    <td><%= review.content %></td>
-    <td><%= review.rating %></td>
-  </tr>
-  <% end %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>content</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurant.reviews.each do |review| %>
+    <tr>
+      <td><%= review.content %></td>
+      <td><%= review.rating %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
 
 
