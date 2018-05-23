@@ -68,5 +68,5 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 gem 'autoprefixer-rails'
-
+gem 'jquery-rails'
 gem 'faker'
