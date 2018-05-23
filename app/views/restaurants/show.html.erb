@@ -1,9 +1,9 @@
 <h1><%= @restaurant.name %></h1>
 <p>
-<%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
 </p>
 <p>
-<%= link_to "Back to list", restaurants_path %>
+  <%= link_to "Back to list", restaurants_path %>
 </p>
 <h2>address</h2>
 <p>
@@ -16,3 +16,21 @@
 <p>
   <%= @restaurant.category %>
 </p>
+<h3>reviews</h3>
+<table>
+  <tr>
+    <th>content</th>
+    <th>rating</th>
+  </tr>
+  <% @restaurant.reviews.each do |review| %>
+  <tr>
+    <td><%= review.content %></td>
+    <td><%= review.rating %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+
+
+
