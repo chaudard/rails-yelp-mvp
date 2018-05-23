@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     # we need `restaurant_id` to asssociate review with corresponding restaurant
     @review.restaurant = Restaurant.find(params[:restaurant_id])
     if @review.save
-      redirect_to restaurants_path
+      redirect_to restaurant_path(@review.restaurant)
     else
       render :new
     end
